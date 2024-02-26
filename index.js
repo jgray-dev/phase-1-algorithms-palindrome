@@ -1,6 +1,20 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const split = word.split("");
+  let rev = [];
+  for (let i = 0; i < split.length; i++) {
+    rev[split.length - i - 1] = split[i];
+  }
+
+  const reveresed = rev.join("");
+  const original = split.join("");
+  if (reveresed === original) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+//Write a function isPalindrome that will receive one argument, a string. Your function should return true if the string is a palindrome (that is, if it reads the same forwards and backwards, like "mom" or "racecar"), and return false if it is not a palindrome.
 
 /* 
   Add your pseudocode here
